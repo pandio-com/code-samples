@@ -10,8 +10,8 @@ import (
 func main() {
 
 	const (
-		pulsarURL        string = "pulsar+ssl://<<pandio pulsar url>>"
-		pulsarJWT        string = "<< pandio pulsar JWT>>"
+		pulsarURL        string = "{{ pulsar_url }}"
+		pulsarJWT        string = "{{ pulsar_jwt }}"
 		pulsarTopic      string = "producer-consumer-test"
 		subscriptionName string = "sub-pct"
 	)

@@ -12,8 +12,8 @@ import (
 func main() {
 
 	const (
-		pulsarURL   string = "pulsar+ssl://<<pandio pulsar url>>"
-		pulsarJWT   string = "<< pandio pulsar JWT>>"
+		pulsarURL   string = "{{ pulsar_url }}"
+		pulsarJWT   string = "{{ pulsar_jwt }}"
 		pulsarTopic string = "producer-consumer-test"
 	)
 
@@ -41,14 +41,14 @@ func main() {
 
 	// produce the message
 	ctx := context.Background()
-	msgId, err := producer.Send(ctx, &pulsar.ProducerMessage{
+	msgID, err := producer.Send(ctx, &pulsar.ProducerMessage{
 		Payload: []byte(*message),
 	})
 
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		log.Println("Published message: ", msgId)
+		log.Println("Published message: ", msgID)
 	}
 
 }
