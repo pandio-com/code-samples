@@ -14,7 +14,7 @@ func main() {
 	const (
 		pulsarURL   string = "{{ pulsar_url }}"
 		pulsarJWT   string = "{{ pulsar_jwt }}"
-		pulsarTopic string = "producer-consumer-test"
+		pulsarTopic string = "persistent://public/default/topic-go-pandio-go"
 	)
 
 	message := flag.String("message", "hello world", "the message you want to produce")
