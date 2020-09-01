@@ -12,8 +12,8 @@ func main() {
 	const (
 		pulsarURL        string = "{{ pulsar_url }}"
 		pulsarJWT        string = "{{ pulsar_jwt }}"
-		pulsarTopic      string = "producer-consumer-test"
-		subscriptionName string = "sub-pct"
+		pulsarTopic      string = "persistent://public/default/topic-go-pandio-go"
+		subscriptionName string = "my-subscription-name"
 	)
 
 	// create pulsar client

@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"flag"
-	"fmt"
 	"log"
 
 	"github.com/apache/pulsar-client-go/pulsar"
@@ -14,6 +13,7 @@ func main() {
 	const (
 		pulsarURL   string = "{{ pulsar_url }}"
 		pulsarJWT   string = "{{ pulsar_jwt }}"
+		pulsarTopic string = "persistent://public/default/topic-go-pandio-go"
 		pulsarTopic string = "producer-consumer-test"
 	)
 
@@ -26,7 +26,7 @@ func main() {
 		Authentication: pulsar.NewAuthenticationToken(pulsarJWT),
 	})
 	if err != nil {
-		log.Fatal(fmt.Sprintf("could not create pulsar client: %v", err))
+		log.Fatalf("could not create pulsar client: %v", err)
 	}
 	defer client.Close()
 
@@ -35,7 +35,7 @@ func main() {
 		Topic: pulsarTopic,
 	})
 	if err != nil {
-		log.Fatal(fmt.Sprintf("could not create pulsar producer: %v", err))
+		log.Fatalf("could not create pulsar producer: %v", err)
 	}
 	defer producer.Close()
 
