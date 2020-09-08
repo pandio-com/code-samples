@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def pulsarVersion = '2.6.1'
+
+dependencies {
+    compile group: 'org.apache.pulsar', name: 'pulsar-client', version: pulsarVersion
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+}
+
+task runSimpleProducer(type: JavaExec) {
+    group = "org.example"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.SimpleProducer'
+}
+
+task runSimpleConsumer(type: JavaExec) {
+    group = "org.example"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.SimpleConsumer'
+}
