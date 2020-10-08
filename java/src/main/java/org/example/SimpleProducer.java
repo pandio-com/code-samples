@@ -5,7 +5,6 @@ import org.apache.pulsar.client.api.*;
 public class SimpleProducer {
     public static String PULSAR_URL = "";
     public static String PULSAR_JWT = "";
-    public static String PULSAR_TOPIC = "persistent://pandio/pandio-service/test";
     public static String PULSAR_TOPIC = "producer-consumer-test";
 
     public static void main(String[] argv) throws PulsarClientException {
