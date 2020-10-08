@@ -7,27 +7,29 @@ import java.util.concurrent.ExecutionException;
 public class SimpleConsumer {
     public static String PULSAR_URL = "";
     public static String PULSAR_JWT = "";
-    public static String PULSAR_TOPIC = "persistent://public/default/sample-test";
+    public static String PULSAR_TOPIC = "producer-consumer-test";
     public static String PULSAR_SUBSCRIPTION_NAME = "sample-test";
 
     public static void main(String[] argv) {
 
         try (PulsarClient client = PulsarClient.builder()
                 .serviceUrl(PULSAR_URL)
+                .proxyServiceUrl(PULSAR_URL, ProxyProtocol.SNI)
                 .authentication(AuthenticationFactory.token(PULSAR_JWT))
-                .allowTlsInsecureConnection(true)
                 .build()) {
             try (Consumer<byte[]> consumer = client.newConsumer()
-                    .topic("my-topic")
+                    .topic(PULSAR_TOPIC)
                     .subscriptionName(PULSAR_SUBSCRIPTION_NAME)
                     .subscribe()) {
                 Message<byte[]> message = consumer.receive();
                 try {
-                    System.out.printf("Message Received with Data : %s", new String(message.getData()));
+                    System.out.printf("Message Received with Data : %s\n", new String(message.getData()));
                     consumer.acknowledge(message);
                 } catch (Exception e ) {
                     consumer.negativeAcknowledge(message);
                     e.printStackTrace();
+                } finally {
+                    consumer.close();
                 }
             }
 
