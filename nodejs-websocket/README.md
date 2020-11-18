@@ -2,6 +2,13 @@
 
 Websocket Pulsar producer and consumer in node.
 
+```
+npm install
+```
+first run above command for install dependency
+
+
+
 Update `consumer.js` and `producer.js` and add your `pulsarURL` and `pulsarJWT` as provided in the Pandio UI on your cluster details page.
 
 Then, start one or more consumers:
