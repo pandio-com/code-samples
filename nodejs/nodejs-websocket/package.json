@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-websocket",
+  "version": "1.0.0",
+  "author": "pandio.com",
+  "license": "ISC",
+  "scripts": {
+    "producer": "node producer.js",
+    "cosumer": "node consumer.js"
+  },
+  "dependencies": {
+    "ws": "^7.4.0"
+  }
+}

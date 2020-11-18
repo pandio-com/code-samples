@@ -9,7 +9,7 @@ let WebSocket = require('ws'),
 
 ws.on('message', function(message) {
     var receiveMsg = JSON.parse(message);
-    console.log('Received: %s - payload: %s', message, new Buffer(receiveMsg.payload, 'base64').toString());
+    console.log('Received: %s - payload: %s', message, new Buffer.from(receiveMsg.payload, 'base64').toString());
     var ackMsg = {"messageId" : receiveMsg.messageId};
     ws.send(JSON.stringify(ackMsg));
 });

@@ -7,7 +7,7 @@ let WebSocket = require('ws'),
     ws = new WebSocket(topic, {headers :{Authorization: "Bearer  "+ pulsarJWT}});
 
 var message = {
-    "payload" : new Buffer("Hello World").toString('base64')
+    "payload" : new Buffer.from("Hello World!").toString('base64')
 };
 
 ws.on('open', function() {
