@@ -5,7 +5,8 @@
   "license": "ISC",
   "scripts": {
     "producer": "node producer.js",
-    "consumer": "node consumer.js"
+    "consumer": "node consumer.js",
+    "reader": "node reader.js"
   },
   "dependencies": {
     "ws": "^7.4.0"

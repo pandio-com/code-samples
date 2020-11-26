@@ -1,10 +1,12 @@
+const WebSocket = require('ws');
+const path = require('path');
+
 const pulsarURL = "{{ pulsar_url }}"
 const pulsarJWT = "{{ pulsar_jwt }}"
 const pulsarTopic = "persistent/public/default/topic-go-pandio-go"
 
-let WebSocket = require('ws'),
-    topic = pulsarURL + pulsarTopic,
-    ws = new WebSocket(topic, {headers :{Authorization: "Bearer  "+ pulsarJWT}});
+let topic = path.join(pulsarURL, '/v2/producer/', pulsarTopic);
+let ws = new WebSocket(topic, {headers :{Authorization: "Bearer  "+ pulsarJWT}});
 
 var message = {
     "payload" : new Buffer.from("Hello World!").toString('base64')
