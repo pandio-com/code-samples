@@ -2,10 +2,10 @@ import pulsar
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent://public/default/topic-go-pandio-go'
-subscriptionName = 'my-subscription-name'
+pulsarTopic = 'persistent://public/default/python-simple'
+subscriptionName = 'sample'
 
-client = pulsar.Client(pulsarURL,authentication=pulsar.AuthenticationToken(pulsarJWT))
+client = pulsar.Client(pulsarURL, authentication=pulsar.AuthenticationToken(pulsarJWT))
 
 consumer = client.subscribe(pulsarTopic,subscriptionName)
 
