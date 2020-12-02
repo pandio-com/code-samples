@@ -5,6 +5,9 @@ Simple Pulsar producer and consumer in Python.
 Update `consumer.py` and `producer.py` and add your `pulsarURL` and `pulsarJWT` as provided in the Pandio UI on your cluster details page.
 
 Install pulsar-client:
+
+Note: Python needs a customized pulsar client at the moment because the official client does not have TLS SNI support, which is required for connecting to Pulsar instance(s) managed by Pandio.
+
 ```
 python3 -m venv .venv
 source .venv/bin/activate
