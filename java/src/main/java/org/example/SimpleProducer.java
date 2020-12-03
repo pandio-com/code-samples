@@ -3,9 +3,9 @@ package org.example;
 import org.apache.pulsar.client.api.*;
 
 public class SimpleProducer {
-    public static String PULSAR_URL = "";
-    public static String PULSAR_JWT = "";
-    public static String PULSAR_TOPIC = "producer-consumer-test";
+    public static String PULSAR_URL = "{{ pulsar_url }}";
+    public static String PULSAR_JWT = "{{ pulsar_url }}";
+    public static String PULSAR_TOPIC = "persistent://public/default/java-simple";
 
     public static void main(String[] argv) throws PulsarClientException {
         PulsarClient client = PulsarClient.builder()
