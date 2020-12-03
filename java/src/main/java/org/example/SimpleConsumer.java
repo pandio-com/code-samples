@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 
 public class SimpleConsumer {
     public static String PULSAR_URL = "{{ pulsar_url }}";
-    public static String PULSAR_JWT = "{{ pulsar_url }}";
+    public static String PULSAR_JWT = "{{ pulsar_jwt }}";
     public static String PULSAR_TOPIC = "persistent://public/default/java-simple";
     public static String PULSAR_SUBSCRIPTION_NAME = "sample";
 
