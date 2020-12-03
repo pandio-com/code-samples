@@ -1,8 +1,13 @@
 import pulsar
+import logging
+
+# create logger
+ch = logging.getLogger()
+ch.setLevel(logging.DEBUG)
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent://public/default/topic-go-pandio-go'
+pulsarTopic = 'persistent://public/default/python-simple'
 
 client = pulsar.Client(pulsarURL,authentication=pulsar.AuthenticationToken(pulsarJWT))
 
