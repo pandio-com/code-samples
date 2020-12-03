@@ -4,10 +4,10 @@ import json
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent/public/default/topic-go-pandio-go/'
-subscriptionName = 'my-subscription-name'
+pulsarTopic = 'persistent/public/default/python-websocket'
+subscriptionName = 'sample'
 
-ws = websocket.create_connection(pulsarURL + pulsarTopic + subscriptionName, header=["Authorization: Bearer "+pulsarJWT])
+ws = websocket.create_connection(pulsarURL + pulsarTopic + subscriptionName, header = ["Authorization: Bearer " + pulsarJWT])
 
 while True:
     msg = json.loads(ws.recv())

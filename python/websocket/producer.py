@@ -4,9 +4,9 @@ import json
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent/public/default/topic-go-pandio-go/'
+pulsarTopic = 'persistent/public/default/python-websocket'
 
-ws = websocket.create_connection(pulsarURL + pulsarTopic, header=["Authorization: Bearer "+pulsarJWT])
+ws = websocket.create_connection(pulsarURL + pulsarTopic, header = ["Authorization: Bearer " + pulsarJWT])
 # Send one message as JSON
 ws.send(json.dumps({
     'payload': base64.b64encode(b'Hello world!').decode('utf-8'),

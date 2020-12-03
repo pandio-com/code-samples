@@ -11,8 +11,7 @@ Note: Python needs a customized pulsar client at the moment because the official
 ```
 python3 -m venv .venv
 source .venv/bin/activate
-pip3 install --extra-index-url https://cdn.pandio.com/pypi pandio-pulsar-client
-pip3 install pandio-pulsar-client
+pip3 install --extra-index-url https://cdn.pandio.com/pypi pulsar-client-pandio
 ```
 
 Then, start one or more consumers:
