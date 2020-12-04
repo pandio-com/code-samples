@@ -5,7 +5,7 @@ const pulsarURL = "{{ pulsar_url }}"
 const pulsarJWT = "{{ pulsar_jwt }}"
 const pulsarTopic = "persistent/public/default/nodejs-websocket"
 
-const topic = path.join(pulsarURL, '/v2/consumer/', pulsarTopic);;
+const topic = path.join(pulsarURL, '/v2/producer/', pulsarTopic);
 const ws = new WebSocket(topic, {headers :{Authorization: "Bearer  "+ pulsarJWT}});
 
 var message = {
