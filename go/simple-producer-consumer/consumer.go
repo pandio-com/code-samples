@@ -12,7 +12,7 @@ func main() {
 	const (
 		pulsarURL        string = "{{ pulsar_url }}"
 		pulsarJWT        string = "{{ pulsar_jwt }}"
-		pulsarTopic      string = "persistent://public/default/go-simple"
+		pulsarTopic      string = "persistent://{{pulsar_tenant}}/{{pulsar_namespace}}/go-simple"
 		subscriptionName string = "sample"
 	)
 

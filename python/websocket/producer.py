@@ -4,7 +4,7 @@ import json
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent/public/default/python-websocket'
+pulsarTopic = 'persistent://{{pulsar_tenant}}/{{pulsar_namespace}}/python-websocket'
 
 ws = websocket.create_connection(pulsarURL + pulsarTopic, header = ["Authorization: Bearer " + pulsarJWT])
 # Send one message as JSON
