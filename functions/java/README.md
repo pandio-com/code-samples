@@ -19,7 +19,7 @@ Java function must be packaged and uploaded as a JAR file. To get started please
 
 ### Class Name
 
-FQDN (Fully Qualified Class Name) of a function. Example: `org.apache.pulsar.functions.api.examples.ExclamationFunction`
+FQCN (Fully Qualified Class Name) of a function. Example: `org.apache.pulsar.functions.api.examples.ExclamationFunction`
 
 ### Paralelism
 
