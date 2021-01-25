@@ -52,7 +52,7 @@ Advanced output topic properties:
 
 ### User properties
 
-Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. An example which reads user-defined configuration property in [Python](user-prop.py).
+Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](user-prop.py).
 
 ### Resources
 
