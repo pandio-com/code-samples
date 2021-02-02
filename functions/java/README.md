@@ -21,10 +21,6 @@ Java function must be packaged and uploaded as a JAR file. To get started please
 
 FQCN (Fully Qualified Class Name) of a function. Example: `org.apache.pulsar.functions.api.examples.ExclamationFunction`
 
-### Paralelism
-
-Number of function instances to spin up.
-
 ### Processing Guarantees
 
 A [messaging semantics](https://pulsar.apache.org/docs/en/functions-overview/#processing-guarantees) that can be applied to a function.
@@ -57,9 +53,15 @@ Advanced output topic properties:
 
 Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Java](https://github.com/apache/pulsar/blob/master/pulsar-functions/java-examples/src/main/java/org/apache/pulsar/functions/api/examples/UserConfigFunction.java#L33).
 
-### Resources
 
-Amount of computational resources to allocate to function instances.
+### Paralelism && Resources
+
+* Number of function instances to spin up.
+* Amount of computational resources to allocate to the function instances.
+
+**PLEASE NOTE:** 
+* In Business Plan account users can create at most 3 function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
+* In Starter Plan account users can create at most 1 function instance which can request 1 CPU unit, 1 GB of RAM and 10 GB of storage 
 
 ## Examples
 
