@@ -18,10 +18,6 @@ You can upload either a [single Python file](simple.py) or package a function wi
 
 The Class Name of the function. For Python functions with no classes, enter the file name without extension.
 
-### Paralelism
-
-Number of function instances to spin up.
-
 ### Processing Guarantees
 
 A [messaging semantics](https://pulsar.apache.org/docs/en/functions-overview/#processing-guarantees) that can be applied to a function.
@@ -54,9 +50,14 @@ Advanced output topic properties:
 
 Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](user-prop.py).
 
-### Resources
+### Paralelism && Resources
 
-Amount of computational resources to allocate to function instances.
+* Number of function instances to spin up.
+* Amount of computational resources to allocate to the function instances.
+
+**PLEASE NOTE:** 
+* In Business Plan account users can create at most 3 function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
+* In Starter Plan account users can create at most 1 function instance which can request 1 CPU unit, 1 GB of RAM and 10 GB of storage 
 
 ## Examples
 
