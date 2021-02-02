@@ -53,8 +53,7 @@ Advanced output topic properties:
 
 Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Java](https://github.com/apache/pulsar/blob/master/pulsar-functions/java-examples/src/main/java/org/apache/pulsar/functions/api/examples/UserConfigFunction.java#L33).
 
-
-### Paralelism && Resources
+### Paralelism & Resources
 
 * Number of function instances to spin up.
 * Amount of computational resources to allocate to the function instances.
