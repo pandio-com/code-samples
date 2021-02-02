@@ -50,7 +50,7 @@ Advanced output topic properties:
 
 Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](user-prop.py).
 
-### Paralelism && Resources
+### Paralelism & Resources
 
 * Number of function instances to spin up.
 * Amount of computational resources to allocate to the function instances.
