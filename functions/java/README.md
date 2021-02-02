@@ -1,6 +1,6 @@
-# How to deploy a Java function?
+## How to deploy a Java function?
 
-## The Add Function form
+The following guide will help you setup and configure your Pandio function via the form on the left.
 
 ### Function Name
 
