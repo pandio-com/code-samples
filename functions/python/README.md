@@ -55,9 +55,10 @@ Optional user-defined configuration properties passed to functions as arbitrary 
 * Number of function instances to spin up.
 * Amount of computational resources to allocate to the function instances.
 
-**PLEASE NOTE:** 
-* In Business Plan account users can create at most 3 function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
-* In Starter Plan account users can create at most 1 function instance which can request 1 CPU unit, 1 GB of RAM and 10 GB of storage 
+### Resource Quotas
+
+* Business Plan account users can create at most **10** function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
+* Starter Plan account users can create at most **1** function instance with 1 CPU unit, 1 GB of RAM and 10 GB of storage
 
 ## Examples
 
