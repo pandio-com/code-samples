@@ -4,7 +4,7 @@ The following guide will help you setup and configure your Pandio function via t
 
 ### Function Name
 
-We generated a random function name. Feel free to change it. The name must be unique within each Pulsar namespace.
+We generated a random function name but feel free to change it. The name must be unique within each Pulsar namespace and we recommend it be descriptive, eg `check-fraud` or `enrich-stream`. We only allow lower case characters `a-z`, numbers `0-9` and `-`.
 
 ### Runtime
 
@@ -60,8 +60,8 @@ Optional user-defined configuration properties passed to functions as arbitrary 
 
 ### Resource Quotas
 
-* Business Plan account users can create at most **10** function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
-* Starter Plan account users can create at most **1** function instance with 1 CPU unit, 1 GB of RAM and 10 GB of storage
+* The Business Plan can have at most **10** function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
+* The Starter Plan can have at most **1** function instance with 1 CPU unit, 1 GB of RAM and 10 GB of storage
 
 ## Examples
 
