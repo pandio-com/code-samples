@@ -12,7 +12,7 @@ Currently, we support Python 3 and Java 8 runtimes.
 
 ### Function / Package file
 
-You can upload either a [single Python file](simple.py) or package a function with the [Zip file](https://pulsar.apache.org/docs/en/functions-package/#zip-file).
+You can upload either a [single Python file](https://github.com/pandio-com/code-samples/blob/develop/functions/python/simple.py) or package a function with the [Zip file](https://pulsar.apache.org/docs/en/functions-package/#zip-file).
 
 ### Class Name
 
@@ -48,7 +48,7 @@ Advanced output topic properties:
 
 ### User properties
 
-Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](user-prop.py).
+Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](https://github.com/pandio-com/code-samples/blob/develop/functions/python/user-prop.py).
 
 ### Paralelism & Resources
 
@@ -62,6 +62,6 @@ Optional user-defined configuration properties passed to functions as arbitrary 
 
 ## Examples
 
-* [Native Python function](simple.py)
-* [Pulsar SDK Python function](sdk.py)
-* [Example with SerDe (Serialization/Deserialization)](serde.py)
+* [Native Python function](https://github.com/pandio-com/code-samples/blob/develop/functions/python/simple.py)
+* [Pulsar SDK Python function](https://github.com/pandio-com/code-samples/blob/develop/functions/python/sdk.py)
+* [Example with SerDe (Serialization/Deserialization)](https://github.com/pandio-com/code-samples/blob/develop/functions/python/serde.py)
