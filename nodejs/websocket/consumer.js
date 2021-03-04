@@ -3,7 +3,7 @@ const WebSocket = require('ws');
 
 const pulsarURL = "{{ pulsar_url }}"
 const pulsarJWT = "{{ pulsar_jwt }}"
-const pulsarTopic = "persistent://{{pulsar_tenant}}/{{pulsar_namespace}}/nodejs-websocket"
+const pulsarTopic = "persistent/{{pulsar_tenant}}/{{pulsar_namespace}}/nodejs-websocket"
 const subscriptionName = "sample"
 
 const topic = path.join(pulsarURL, '/v2/consumer/', pulsarTopic, subscriptionName);
