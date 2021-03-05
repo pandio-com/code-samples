@@ -27,7 +27,7 @@ A [messaging semantics](https://pulsar.apache.org/docs/en/functions-overview/#pr
 
 ### Auto Acknowledgement
 
-A flag to enable or disable auto acknowledgment of consumed messages.
+A flag to enable or disable auto acknowledgement of consumed messages.
 
 ### Search & Select Output Topic
 

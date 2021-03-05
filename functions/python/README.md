@@ -1,6 +1,10 @@
 ## How to deploy a Python function?
 
+<<<<<<< HEAD
 The following guide will help you set up and configure your Pandio function via the form on the left.
+=======
+The following guide will help you setup and configure your Pandio function via the form on the left.
+>>>>>>> 631d37c (Updated code templates. (#16))
 
 ### Function Name
 
@@ -24,7 +28,7 @@ A [messaging semantics](https://pulsar.apache.org/docs/en/functions-overview/#pr
 
 ### Auto Acknowledgement
 
-A flag to enable or disable auto acknowledgment of consumed messages.
+A flag to enable or disable auto acknowledgement of consumed messages.
 
 ### Search & Select Output Topic
 
