@@ -1,6 +1,6 @@
 ## How to deploy a Python function?
 
-The following guide will help you setup and configure your Pandio function via the form on the left.
+The following guide will help you set up and configure your Pandio function via the form on the left.
 
 ### Function Name
 
@@ -24,21 +24,21 @@ A [messaging semantics](https://pulsar.apache.org/docs/en/functions-overview/#pr
 
 ### Auto Acknowledgement
 
-A flag to enable or disable auto acknowledgement of consumed messages.
+A flag to enable or disable auto acknowledgment of consumed messages.
 
 ### Search & Select Output Topic
 
 Name of an output topic where the function will produce results.
 
-### Paralelism & Resources
+### Parallelism & Resources
 
 * Number of function instances to spin up.
 * Amount of computational resources to allocate to the function instances.
 
 #### NOTE: Resource Quotas
 
-* The Business Plan can have at most **10** function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
-* The Starter Plan can have at most **1** function instance with 1 CPU unit, 1 GB of RAM and 10 GB of storage
+* The Business Plan can have at most **10** function instances that share 3 CPU units, 3 GB of RAM, and 10 GB of storage
+* The Starter Plan can have at most **1** function instance with 1 CPU unit, 1 GB of RAM, and 10 GB of storage
 
 ### Add Inputs Configuration
 
@@ -48,7 +48,7 @@ A user can specify a few advanced properties for the Input topics: **Schema type
 
 ### User Configuration
 
-Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Python](https://github.com/pandio-com/code-samples/blob/develop/functions/python/user-prop.py).
+Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. The key-value pair map is part of the function context. An example that reads user-defined configuration property in [Python](https://github.com/pandio-com/code-samples/blob/develop/functions/python/user-prop.py).
 
 ## Examples
 
