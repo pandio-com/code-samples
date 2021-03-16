@@ -1,0 +1,7 @@
+nodejs/client/node_modules/*
+nodejs/websocket/node_modules/*
+go/simple-producer-consumer/vendor/*
+java/bin/*
+java/.classpath
+java/.project
+java/.settings
