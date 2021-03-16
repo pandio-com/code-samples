@@ -1,8 +1,6 @@
-package org.example;
+package org.example.helloworld;
 
 import org.apache.pulsar.client.api.*;
-
-import java.util.concurrent.ExecutionException;
 
 public class SimpleConsumer {
     public static String PULSAR_URL = "{{ pulsar_url }}";
@@ -20,11 +18,14 @@ public class SimpleConsumer {
             try (Consumer<byte[]> consumer = client.newConsumer()
                     .topic(PULSAR_TOPIC)
                     .subscriptionName(PULSAR_SUBSCRIPTION_NAME)
+                    .subscriptionType(SubscriptionType.Key_Shared)
+                    .subscriptionInitialPosition(SubscriptionInitialPosition.Earliest)
                     .subscribe()) {
                 Message<byte[]> message = consumer.receive();
                 try {
                     System.out.printf("Message Received with Data : %s\n", new String(message.getData()));
                     consumer.acknowledge(message);
+                    System.out.printf("Message Id : %s\n", message.getMessageId().toString());
                 } catch (Exception e ) {
                     consumer.negativeAcknowledge(message);
                     e.printStackTrace();

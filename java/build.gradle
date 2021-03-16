@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'org.example.helloworld'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -17,15 +17,44 @@ dependencies {
 }
 
 task runSimpleProducer(type: JavaExec) {
-    group = "org.example"
+    group = "org.example.helloworld"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'org.example.SimpleProducer'
+    main = 'org.example.helloworld.SimpleProducer'
 }
 
 task runSimpleConsumer(type: JavaExec) {
-    group = "org.example"
+    group = "org.example.helloworld"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'org.example.SimpleConsumer'
+    main = 'org.example.helloworld.SimpleConsumer'
+}
+
+
+task runSimpleReplay(type: JavaExec) {
+    group = "org.example.helloworld"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.helloworld.SimpleReplay'
+}
+
+task runOrderingProducer(type: JavaExec) {
+    group = "org.example.ordering"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.ordering.OrderingProducer'
+}
+
+task runOrderingBatchProducer(type: JavaExec) {
+    group = "org.example.ordering"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.ordering.OrderingBatchProducer'
+}
+
+task runOrderingConsumer(type: JavaExec) {
+    group = "org.example.ordering"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.ordering.OrderingConsumer'
 }
