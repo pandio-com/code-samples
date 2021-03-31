@@ -33,15 +33,15 @@ A flag to enable or disable auto acknowledgement of consumed messages.
 
 Name of an output topic where the function will produce results.
 
-### Paralelism & Resources
+### Parallelism & Resources
 
 * Number of function instances to spin up.
 * Amount of computational resources to allocate to the function instances.
 
 #### NOTE: Resource Quotas
 
-* The Business Plan can have at most **10** function instances which share 3 CPU units, 3 GB of RAM and 10 GB of storage
-* The Starter Plan can have at most **1** function instance with 1 CPU unit, 1 GB of RAM and 10 GB of storage
+* The Business Plan can have at most **10** function instances that share 3 CPU units, 3 GB of RAM, and 10 GB of storage
+* The Starter Plan can have at most **1** function instance with 1 CPU unit, 1 GB of RAM, and 10 GB of storage
 
 ### Add Inputs Configuration
 
@@ -51,7 +51,7 @@ A user can specify a few advanced properties for the Input topics: **Schema type
 
 ### User Configuration
 
-Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. Key-value pair map is part of function context. An example which reads user-defined configuration property in [Java](https://github.com/apache/pulsar/blob/master/pulsar-functions/java-examples/src/main/java/org/apache/pulsar/functions/api/examples/UserConfigFunction.java#L33).
+Optional user-defined configuration properties passed to functions as arbitrary key-value pairs. The key-value pair map is part of the function context. An example that reads user-defined configuration property in [Java](https://github.com/apache/pulsar/blob/master/pulsar-functions/java-examples/src/main/java/org/apache/pulsar/functions/api/examples/UserConfigFunction.java#L33).
 
 ## Examples
 
