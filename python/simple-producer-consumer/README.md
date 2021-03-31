@@ -1,6 +1,6 @@
 # Simple Producer and Consumer
 
-Simple Pulsar producer and consumer in Python.
+Simple Pulsar producer and consumer in Python. Versions `3.5` through `3.8` are supported.
 
 Update `consumer.py` and `producer.py` and add your `pulsarURL` and `pulsarJWT` as provided in the Pandio UI on your cluster details page.
 
@@ -11,7 +11,7 @@ Note: Python needs a customized pulsar client at the moment because the official
 ```
 python3 -m venv .venv
 source .venv/bin/activate
-pip3 install --extra-index-url https://cdn.pandio.com/pypi pulsar-client-pandio
+pip3 install --extra-index-url https://cdn.pandio.com/pypi pulsar-client-pandio --use-feature=2020-resolver
 ```
 
 Then, start one or more consumers:
