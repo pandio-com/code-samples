@@ -87,3 +87,20 @@ Message Received with Data : Test Message
 [pulsar-client-io-1-1] INFO org.apache.pulsar.client.impl.ClientCnx - [id: 0xf7ea1b32, L:/192.168.9.9:57858 ! R:pulsar.staging.pandio.com/35.225.185.117:6651] Disconnected
 [pulsar-client-io-1-1] INFO org.apache.pulsar.client.impl.ClientCnx - [id: 0xb667cab7, L:/192.168.9.9:57860 ! R:pulsar.staging.pandio.com/35.225.185.117:6651] Disconnected
 ```
+
+## Produce & Consume with Schema
+
+If you want type safety for your messages then you can define schema while produce and consume message. Here we used [generic AVRO schema](https://pulsar.apache.org/docs/en/schema-understand/#generic). 
+
+Update `SimpleConsumerWithSchema.java` and `SimpleProducerWithSchema.java` and add your `PULSAR_URL` and `PULSAR_JWT` as provided in the Pandio UI on your cluster details page.
+
+Then, start one or more consumers:
+
+```
+./gradlew runSimpleConsumerWithSchema
+```
+
+Then, in a separate terminal, start producing messages:
+```
+./gradlew runSimpleProducerWithSchema
+```
