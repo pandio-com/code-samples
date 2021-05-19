@@ -1,6 +1,6 @@
 ## How to deploy a Python function?
 
-The following guide will help you set up and configure your Pandio function via the form on the left.
+The following guide will help you setup and configure your Pandio function via the form on the left.
 
 ### Function Name
 
