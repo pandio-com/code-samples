@@ -90,7 +90,7 @@ Message Received with Data : Test Message
 
 ## Produce & Consume with Schema
 
-If you want type safety for your messages then you can define schema while produce and consume message. Here we used [generic AVRO schema](https://pulsar.apache.org/docs/en/schema-understand/#generic). 
+If you want type safety for your messages, then you can define a `schema` while producing and consumeing messages. Here we used [generic AVRO schema](https://pulsar.apache.org/docs/en/schema-understand/#generic).
 
 Update `SimpleConsumerWithSchema.java` and `SimpleProducerWithSchema.java` and add your `PULSAR_URL` and `PULSAR_JWT` as provided in the Pandio UI on your cluster details page.
 
