@@ -23,9 +23,23 @@ task runSimpleProducer(type: JavaExec) {
     main = 'org.example.SimpleProducer'
 }
 
+task runSimpleProducerWithSchema(type: JavaExec) {
+    group = "org.example"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.SimpleProducerWithSchema'
+}
+
 task runSimpleConsumer(type: JavaExec) {
     group = "org.example"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
     main = 'org.example.SimpleConsumer'
+}
+
+task runSimpleConsumerWithSchema(type: JavaExec) {
+    group = "org.example"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.SimpleConsumerWithSchema'
 }
