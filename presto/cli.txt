@@ -1,1 +1,3 @@
-./trino.jar --server {{ http_url }} --access-token {{ token }} --user {{ username }}
+./trino.jar --server {{ http_url }} \
+    --user {{ username }} \
+    --access-token {{ token }}
