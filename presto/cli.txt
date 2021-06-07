@@ -1,0 +1,1 @@
+./trino.jar --server {{ http_url }} --access-token {{ token }} --user {{ username }}
