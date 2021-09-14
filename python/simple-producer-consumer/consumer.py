@@ -2,7 +2,7 @@ import pulsar
 
 pulsarURL = '{{ pulsar_url }}'
 pulsarJWT = '{{ pulsar_jwt }}'
-pulsarTopic = 'persistent://public/default/python-simple'
+pulsarTopic = 'persistent://{{pulsar_tenant}}/{{pulsar_namespace}}/python-simple'
 subscriptionName = 'sample'
 
 client = pulsar.Client(pulsarURL, authentication=pulsar.AuthenticationToken(pulsarJWT))
