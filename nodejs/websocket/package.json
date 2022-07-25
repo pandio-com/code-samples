@@ -8,6 +8,6 @@
     "consumer": "node consumer.js"
   },
   "dependencies": {
-    "ws": "^7.4.0"
+    "ws": "^7.4.6"
   }
 }
